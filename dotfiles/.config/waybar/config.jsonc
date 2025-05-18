@@ -75,7 +75,7 @@
     "hyprland/window": {
         // "format": "{title:.30}",
         "separate-outputs": true,
-        "max-length": 50,
+        "max-length": 55,
         "icon": true,
         // "rewrite": {
         //   "(^.{0,20}$)": "$1",
@@ -144,7 +144,7 @@
         // "format": "{}",
         "format": "{title:.30}",
         "separate-outputs": true,
-        "max-length": 50,
+        "max-length": 55,
         "icon": true,
         // "rewrite": {
         //   "(^.{0,20}) - (.*)": "$1",
