@@ -92,7 +92,7 @@
     },
     "custom/lock": {
       "tooltip": false,
-      "on-click": "hyprlock &",
+      "on-click": "hyprctl dispatch --instance 0 'exec hyprlock' &",
       "format": ""
     },
     "custom/docker": {
@@ -205,7 +205,7 @@
     },
     "custom/lock": {
       "tooltip": false,
-      "on-click": "hyprlock &",
+      "on-click": "hyprctl dispatch --instance 0 'exec hyprlock' &",
       "format": ""
     },
     "custom/docker": {
