@@ -20,6 +20,10 @@
     "hyprland/workspaces": {
       "format": "{name}: {icon}",
       "format-icons": {
+        "1": "",
+        "2": "",
+        "4": "",
+        "8": "󰝚",
         "active": "",
         "default": ""
       }
@@ -132,6 +136,10 @@
     "hyprland/workspaces": {
       "format": "{name}: {icon}",
       "format-icons": {
+        "1": "",
+        "2": "",
+        "4": "",
+        "8": "󰝚",
         "active": "",
         "default": ""
       }
