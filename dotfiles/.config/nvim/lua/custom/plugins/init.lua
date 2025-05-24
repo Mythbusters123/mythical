@@ -3,21 +3,25 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons' },
-    config = function()
-      require('lualine').setup {
-        theme = 'onedark',
-        sections = {
-          lualine_a = { 'mode' },
-          lualine_b = {},
-          lualine_c = { 'filename' },
-          lualine_x = { 'encoding', 'fileformat', 'filetype' },
-          lualine_y = { 'progress' },
-          lualine_z = { 'location' },
-        },
-      }
-    end,
-  },
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("lualine").setup({
+				theme = "onedark",
+				sections = {
+					lualine_a = { "mode" },
+					lualine_b = {},
+					lualine_c = { "filename" },
+					lualine_x = { "encoding", "fileformat", "filetype" },
+					lualine_y = { "progress" },
+					lualine_z = { "location" },
+				},
+			})
+		end,
+	},
+	{
+		"m4xshen/smartcolumn.nvim",
+		opts = {},
+	},
 }

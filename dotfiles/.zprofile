@@ -3,8 +3,8 @@
 
 # Profile file, runs on login. Environmental variables are set here.
 
-# Add all directories in `~/.local/bin` to $PATH
-export PATH="$PATH:$(find ~/.local/bin -type d | paste -sd ':' -)"
+# Add all directories in `~/.local/bin` to $PATH, follow sylmlinks too
+export PATH="$PATH:$(find -L ~/.local/bin -type d | paste -sd ':' -)"
 
 unsetopt PROMPT_SP 2>/dev/null
 
