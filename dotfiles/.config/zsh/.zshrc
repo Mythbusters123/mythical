@@ -69,7 +69,8 @@ bindkey -s '^o' '^ulfcd\n'
 
 bindkey -s '^a' '^ubc -lq\n'
 
-bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"\n'
+eval "$(zoxide init zsh)"
+bindkey -s '^f' '^uz "$dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
 
@@ -80,28 +81,27 @@ bindkey -M vicmd '^[[P' vi-delete-char
 bindkey -M vicmd '^e' edit-command-line
 bindkey -M visual '^[[P' vi-delete
 
-# Load syntax highlighting; should be last.
-source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 autoload -Uz compinit
 fpath+=~/.zfunc
 
- eval "$(zoxide init zsh)"
 
-function conda_init() {
-# !! Contents within this block are managed by 'conda init' !!
- __conda_setup="$('/home/adam/Documents/Python/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
- if [ $? -eq 0 ]; then
-     eval "$__conda_setup"
- else
-     if [ -f "/home/adam/Documents/Python/anaconda3/etc/profile.d/conda.sh" ]; then
-         . "/home/adam/Documents/Python/anaconda3/etc/profile.d/conda.sh"
-     else
-         export PATH="/home/adam/Documents/Python/anaconda3/bin:$PATH"
-     fi
- fi
- unset __conda_setup
-# <<< conda initialize <<<
-}
+# function conda_init() {
+# # !! Contents within this block are managed by 'conda init' !!
+#  __conda_setup="$('/home/adam/Documents/Python/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+#  if [ $? -eq 0 ]; then
+#      eval "$__conda_setup"
+#  else
+#      if [ -f "/home/adam/Documents/Python/anaconda3/etc/profile.d/conda.sh" ]; then
+#          . "/home/adam/Documents/Python/anaconda3/etc/profile.d/conda.sh"
+#      else
+#          export PATH="/home/adam/Documents/Python/anaconda3/bin:$PATH"
+#      fi
+#  fi
+#  unset __conda_setup
+# # <<< conda initialize <<<
+# }
 
 [ -f /usr/share/nvim/init-nvm.sh ] && source /usr/share/nvim/init-nvm.sh
+# Load syntax highlighting; should be last.
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null

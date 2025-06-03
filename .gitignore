@@ -1,1 +1,6 @@
 dotfiles/.config/tmux/plugins
+dotfiles/.local/share/*
+!dotfiles/.local/share/applications
+dotfiles/.config/zsh/.zcompdump
+dotfiles/.local/state
+dotfiles/.config/nvim/lazy-lock.json
