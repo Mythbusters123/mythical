@@ -23,6 +23,7 @@ export BROWSER="zen-browser"
 # Default directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_DATA_DIRS="/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 # See https://wiki.archlinux.org/title/XDG_Base_Directory
 # export XDG_RUNTIME_DIR="/run/user/$(id -u)"

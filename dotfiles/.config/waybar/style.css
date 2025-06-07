@@ -1,5 +1,7 @@
 * {
-  font-family: JetbrainsMono Nerd Font;
+  /* font-family: JetbrainsMono Nerd Font; */
+  /* font-family: 'Inter Display'; */
+  font-family: 'FiraCode Nerd Font';
   font-size: 13px;
   min-height: 0;
   padding-right: 2px;
@@ -64,6 +66,10 @@ button {
     border-radius:  5px;
     /* max-width: 200px; */
     /* text-overflow: ellipsis; */
+}
+
+#tray {
+    font-family: 'Inter Display';
 }
 
 #clock {
