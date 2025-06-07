@@ -50,7 +50,7 @@ alias \
 
 # Swap some programs for rust equivalents/better
 alias \
-    cd="__zoxide_z" \
+    # cd="__zoxide_z" \
     ls='eza -lah' \
     cat="bat"
 
