@@ -70,7 +70,7 @@ bindkey -s '^o' '^ulfcd\n'
 bindkey -s '^a' '^ubc -lq\n'
 
 eval "$(zoxide init zsh)"
-bindkey -s '^f' '^uz "$dirname "$(fzf)")"\n'
+bindkey -s '^f' '^u\cd "$(dirname "$(fzf)")"\n'
 
 bindkey '^[[P' delete-char
 
@@ -105,3 +105,4 @@ fpath+=~/.zfunc
 [ -f /usr/share/nvim/init-nvm.sh ] && source /usr/share/nvim/init-nvm.sh
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+clear

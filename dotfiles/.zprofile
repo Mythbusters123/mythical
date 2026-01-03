@@ -4,7 +4,10 @@
 # Profile file, runs on login. Environmental variables are set here.
 
 # Add all directories in `~/.local/bin` to $PATH, follow sylmlinks too
-export PATH="$PATH:$(find -L ~/.local/bin -type d | paste -sd ':' -)"
+export CARGO_HOME="$XDG_DATA_HOME/cargo"
+export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
+export GOPATH="$XDG_DATA_HOME/go"
+export PATH="$PATH:$GOPATH/bin:$CARGO_HOME/bin:$(find -L ~/.local/bin -type d | paste -sd ':' -)"
 
 unsetopt PROMPT_SP 2>/dev/null
 
@@ -30,7 +33,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 # Make programs respect those directories
 export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch-config"
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc-2.0"
-export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
+# export WGETRC="$XDG_CONFIG_HOME/wget/wgetrc"
 export INPUTRC="$XDG_CONFIG_HOME/shell/inputrc"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export GNUPGHOME="$XDG_DATA_HOME/gnupg"
@@ -50,6 +53,7 @@ export MBSYNCRC="$XDG_CONFIG_HOME/mbsync/config"
 export ELECTRUMDIR="$XDG_DATA_HOME/electrum"
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export SQLITE_HISTORY="$XDG_DATA_HOME/sqlite_history"
+# Make electron/browsers respect monitor scaling
 export ELECTRON_OZONE_PLATFORM_HINT=wayland
 export OZONE_PLATFORM=wayland
 export GTK_USE_PORTAL=1  # Optional, for better Wayland support

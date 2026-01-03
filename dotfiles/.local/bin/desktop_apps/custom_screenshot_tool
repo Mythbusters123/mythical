@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-grim -g "$(slurp)" -t "png"  - | tee "$HOME/Pictures/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).png" | wl-copy
-
+hyprshot --clipboard-only -z --mode region; sleep 0.25s && wl-paste | swappy -f - -o - | tee "$HOME/Pictures/Screenshots/Screenshot_$(date +%Y%m%d_%H%M%S).png" | wl-copy
